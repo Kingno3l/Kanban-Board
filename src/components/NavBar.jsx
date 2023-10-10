@@ -1,4 +1,5 @@
 import logo from '../images/logo.png';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => (
   <header className="header">
@@ -9,7 +10,9 @@ const NavBar = () => (
       </div>
       <ul className="list-item">
         <li>Rockets</li>
-        <li>Missions</li>
+        <li>
+          <NavLink to="/mission">Missions</NavLink>
+        </li>
         <li>My Profile</li>
       </ul>
     </nav>
