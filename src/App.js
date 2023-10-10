@@ -9,11 +9,10 @@ import Mission from './components/Mission';
 function App() {
   return (
     <>
-
       {/* <NavBar /> */}
       <Navigation />
-      <NavRoutes />
 
+      <NavRoutes />
     </>
   );
 }
