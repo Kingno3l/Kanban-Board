@@ -19,16 +19,43 @@
   padding: 20px;
 }
 
-.navbar{
+.navbar {
   display: flex;
   margin: 0 50px;
   gap: 700px;
-
 }
 
-.list-item{
+.list-item {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.mission-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.mission {
+  width: 20%;
+}
+
+.description {
+  width: 50%;
+}
+
+.status {
+  width: 20%;
+}
+
+.col {
+  text-align: center;
+}
+
+.col2 {
+  text-align: justify;
 }
