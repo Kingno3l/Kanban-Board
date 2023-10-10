@@ -7,10 +7,10 @@ const NavBar = () => (
         <img src={logo} alt="" className="logo" />
         <h1>Space Travellers Hub</h1>
       </div>
-      <ul>
-        <li />
-        <li />
-        <li />
+      <ul className="list-item">
+        <li>Rockets</li>
+        <li>Missions</li>
+        <li>My Profile</li>
       </ul>
     </nav>
   </header>
