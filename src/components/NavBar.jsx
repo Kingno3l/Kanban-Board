@@ -1,4 +1,3 @@
-
 import { NavLink } from 'react-router-dom';
 import logo from '../images/logo.png';
 
@@ -20,6 +19,6 @@ const NavBar = () => (
   </header>
 );
 
-
+export default NavBar;
 
 // export default NavBar;
