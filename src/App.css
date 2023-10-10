@@ -31,3 +31,32 @@
   align-items: center;
   gap: 20px;
 }
+
+
+.mission-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.mission {
+  width: 20%;
+}
+
+.description {
+  width: 50%;
+}
+
+.status {
+  width: 20%;
+}
+
+.col {
+  text-align: center;
+}
+
+.col2 {
+  text-align: justify;
+
