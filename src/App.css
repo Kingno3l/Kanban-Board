@@ -42,12 +42,18 @@
 
 .table {
   width: 100%;
+  padding: 10px;
 }
 
 .mission,
 .status {
   text-align: start;
   width: 10%;
+  padding: 10px;
+}
+
+td,
+th {
   padding: 10px;
 }
 
@@ -64,8 +70,21 @@
 .member {
   background: black;
   color: #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .bg-color {
   background: blue;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.button {
+  height: 25px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

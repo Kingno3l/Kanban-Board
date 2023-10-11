@@ -12,19 +12,12 @@ const initialState = {
 export const fetchMissions = createAsyncThunk(
   'mission/fetchMissions',
   async () => {
-    try {
-      // Make an API request to fetch the missions
-      const { data } = await axios.get(apiEndPoint);
-      //console.log(data);
+    const { data } = await axios.get(apiEndPoint);
 
-      data.forEach((mission) => {
-        mission.status = 'Not a member';
-      });
-      return data;
-    } catch (error) {
-      // Handle any errors that occur during the fetch
-      throw error;
-    }
+    data.forEach((mission) => {
+      mission.status = 'Not a member';
+    });
+    return data;
   },
 );
 
@@ -37,8 +30,7 @@ export const MissionSlice = createSlice({
       const mission = state.mission.find((m) => m.mission_id === id);
 
       if (mission) {
-        mission.status =
-          mission.status === 'Not a member' ? 'Active member' : 'Not a member';
+        mission.status = mission.status === 'Not a member' ? 'Active member' : 'Not a member';
       }
     },
   },

@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
-import { updateStatus } from '../redux/MissionSlice';
 import { useDispatch } from 'react-redux';
-import { fetchMissions } from '../redux/MissionSlice';
+import { updateStatus, fetchMissions } from '../redux/MissionSlice';
 
 const Mission = () => {
   const { mission, status } = useSelector((store) => store.mission);
@@ -38,7 +37,6 @@ const Mission = () => {
             <th className="mission">Mission</th>
             <th className="col">Description</th>
             <th className="col">Status</th>
-            <th className="col"></th>
           </tr>
         </thead>
         <tbody>
@@ -52,6 +50,7 @@ const Mission = () => {
               <td>
                 <button
                   type="button"
+                  className="button"
                   onClick={() => handleStatusUpdate(m.mission_id)}
                 >
                   Join Mission
@@ -66,4 +65,3 @@ const Mission = () => {
 };
 
 export default Mission;
-
