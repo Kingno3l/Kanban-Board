@@ -1,35 +1,67 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch } from 'react-redux';
+import { updateStatus, fetchMissions } from '../redux/MissionSlice';
 
-const Mission = () => (
-  <section className="mission-section">
-    <table className="table">
-      <thead>
-        <tr>
-          <th className="mission">Mission</th>
-          <th className="description">Description</th>
-          <th className="status">Status</th>
-          <th>empty</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td className="col">Mission name</td>
-          <td className="col2">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore et
-            deserunt corrupti quae at ut tempora in maiores, a quam autem illo
-            officia perferendis, sunt earum, magnam esse doloremque praesentium
-            illum excepturi corporis voluptatibus hic optio. Fugiat quia
-            doloribus, cupiditate beatae voluptatem, saepe, veniam delectus a
-            nisi quisquam deleniti ratione.
-          </td>
-          <td className="col">status</td>
-          <td className="col">
-            <button type="button">Join Mission</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-);
+const Mission = () => {
+  const { mission, status } = useSelector((store) => store.mission);
+  const dispatch = useDispatch();
+
+  const handleStatusUpdate = (id) => {
+    dispatch(updateStatus(id));
+  };
+
+  const updateColor = (status) => {
+    let classes = '';
+    if (status === 'Active member') {
+      classes = 'bg-color';
+    }
+    if (status === 'Not a member') {
+      classes = 'member';
+    } else classes = 'bg-color';
+
+    return classes;
+  };
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchMissions());
+    }
+  }, [status, dispatch]);
+
+  return (
+    <section className="mission-section">
+      <table className="table">
+        <thead>
+          <tr>
+            <th className="mission">Mission</th>
+            <th className="col">Description</th>
+            <th className="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {mission.map((m) => (
+            <tr className="table-row" key={m.mission_id}>
+              <td>{m.mission_name}</td>
+              <td className="description">{m.description}</td>
+              <td>
+                <span className={updateColor(m.status)}>{m.status}</span>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  className="button"
+                  onClick={() => handleStatusUpdate(m.mission_id)}
+                >
+                  Join Mission
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  );
+};
 
 export default Mission;
