@@ -37,8 +37,8 @@ const Mission = () => {
           <tr>
             <th className="mission">Mission</th>
             <th className="col">Description</th>
-            <th className="col">status</th>
-            <th className="col">Update Button</th>
+            <th className="col">Status</th>
+            <th className="col"></th>
           </tr>
         </thead>
         <tbody>
