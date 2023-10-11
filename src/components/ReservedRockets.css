@@ -1,0 +1,15 @@
+.reserved-rockets {
+  border: 1px solid grey;
+  width: 50vw;
+  margin: 20px auto 0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.dragon-reservation,
+.dragon-title {
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 3px 2px 3px;
+}

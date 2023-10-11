@@ -15,10 +15,13 @@ const Navigation = () => (
       <nav className="nav-bar">
         <ul className="nav-lists">
           <li className="items-list">
-            <NavLink to="/">Rocket</NavLink>
+            <NavLink to="/">Dragons</NavLink>
           </li>
           <li className="items-list">
             <NavLink to="/missions">Missions</NavLink>
+          </li>
+          <li className="items-list">
+            <NavLink to="/rocketss">Rocket</NavLink>
           </li>
           <li className="items-list">
             <NavLink to="/profile">My Profile</NavLink>
