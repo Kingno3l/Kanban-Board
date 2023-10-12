@@ -12,7 +12,7 @@ const MyProfile = () => {
       <div className="profile">
         <div className="">
           <h2 className="">My Rockets</h2>
-          <ul className="">
+          <ul className="rocket-list">
             {filterRockets.map((rocket) => (
               <li key={rocket.id} className="">
                 {rocket.name}
