@@ -10,11 +10,12 @@ const MyProfile = () => {
   return (
     <section className="profile-section">
       <div className="profile">
-        <div className="">
-          <h1 className="">My Rockets</h1>
-          <ul className="rocket-list">
+        <div className="rocket-card">
+          <h2 className="title-p">My Rockets</h2>
+          <ul className="profile-card">
+
             {filterRockets.map((rocket) => (
-              <li key={rocket.id} className="">
+              <li key={rocket.id} className="ul-list-item">
                 {rocket.name}
               </li>
             ))}
