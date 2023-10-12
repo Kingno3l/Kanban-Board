@@ -97,3 +97,10 @@
   border: 1px solid #000; /* Change color and width as needed */
   padding: 10px;
 }
+
+.profile-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 100px;
+}
