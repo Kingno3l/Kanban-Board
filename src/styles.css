@@ -58,9 +58,19 @@ a {
 }
 
 .profile {
-  background-color: aqua;
+  padding: 5px;
 }
 
 .rocket {
   background-color: chocolate;
+}
+
+.rocket-list {
+  padding: 5px;
+  width: 600px;
+}
+
+.rocket-list li {
+  border: 1px solid;
+  padding: 10px;
 }
