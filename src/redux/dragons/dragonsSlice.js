@@ -1,6 +1,10 @@
 // redux/dragons/dragonsSlice.js
 
-import { createSelector, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import {
+  createSelector,
+  createAsyncThunk,
+  createSlice,
+} from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const baseUrl = 'https://api.spacexdata.com/v4/dragons';
@@ -24,7 +28,7 @@ const initialState = {
   isLoading: false,
 };
 
-const dragonsSlice = createSlice({
+export const dragonsSlice = createSlice({
   name: 'dragons',
   initialState,
   reducers: {
