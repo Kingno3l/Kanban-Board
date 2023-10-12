@@ -72,4 +72,5 @@ a {
 .rocket-list li {
   border: 1px solid;
   padding: 10px;
+  height: 40px;
 }
