@@ -1,26 +1,46 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../redux/Rockets/RocketsSlice';
 
-// eslint-disable-next-line arrow-body-style
-const RocketsItem = ({ rocket }) => {
-  const imgUrl = rocket.image;
+const RocketsItem = ({
+  id, name, image, description, reserved,
+}) => {
+  const dispatch = useDispatch();
+  const reserveRockets = (buttonId) => {
+    dispatch(reserveRocket(buttonId));
+  };
   return (
-    <li>
-      <img alt="rocket" src={imgUrl} style={{ width: '200px' }} />
-      <p>{rocket.name}</p>
-      <p>{rocket.description}</p>
-      <button type="submit">Reserve Rocket</button>
+    <li className="rocket-content">
+      <img
+        className="rocket-content-right"
+        alt="rocket"
+        src={image}
+        style={{ width: '250px' }}
+      />
+      <div className="rocket-content-left">
+        <p className="rocket-name">{name}</p>
+        <p className="rocket-desc">
+          {reserved && <span className="reserved">Reserved</span>}
+          {description}
+        </p>
+        <button
+          onClick={() => reserveRockets(id)}
+          className={reserved ? 'cancel-reserve-btn' : 'reserve-rocket-btn'}
+          type="submit"
+        >
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+        </button>
+      </div>
     </li>
   );
 };
 
 RocketsItem.propTypes = {
-  rocket: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-  }).isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default RocketsItem;
