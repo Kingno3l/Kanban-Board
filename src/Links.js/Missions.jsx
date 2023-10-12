@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { useDispatch } from 'react-redux';
 import { updateStatus, fetchMissions } from '../redux/MissionSlice';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Mission = () => {
   const { mission, status } = useSelector((store) => store.mission);
@@ -42,7 +43,7 @@ const Mission = () => {
 
   return (
     <section className="mission-section">
-      <table className="table">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th className="mission">Mission</th>
