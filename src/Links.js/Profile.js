@@ -11,7 +11,7 @@ const MyProfile = () => {
     <section className="profile-section">
       <div className="profile">
         <div className="">
-          <h2 className="">My Rockets</h2>
+          <h1 className="">My Rockets</h1>
           <ul className="rocket-list">
             {filterRockets.map((rocket) => (
               <li key={rocket.id} className="">
@@ -29,3 +29,4 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
+
