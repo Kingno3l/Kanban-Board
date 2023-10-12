@@ -1,9 +1,9 @@
 import React from 'react';
-import ReservedRockets from '../components/ReservedRockets';
+import ReservedDragons from '../components/ReservedDragons';
 
 const Profile = () => (
   <div className="profile">
-    <ReservedRockets />
+    <ReservedDragons />
   </div>
 );
 export default Profile;

@@ -1,48 +1,48 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { reserveRocket, cancelReservation } from '../redux/rockets/rocketsSlice';
-import './Rocket.css';
+import { reserveDragon, cancelReservation } from '../redux/dragons/dragonsSlice';
+import './Dragon.css';
 
-const Rocket = ({ rockets }) => {
+const Dragon = ({ dragons }) => {
   const dispatch = useDispatch();
 
   const handleReserve = (id) => {
-    dispatch(reserveRocket(id));
-    localStorage.setItem(`rocket-${id}`, 'reserved');
+    dispatch(reserveDragon(id));
+    localStorage.setItem(`dragon-${id}`, 'reserved');
   };
 
   const handleCancelReservation = (id) => {
     dispatch(cancelReservation(id));
-    localStorage.removeItem(`rocket-${id}`);
+    localStorage.removeItem(`dragon-${id}`);
   };
 
-  const isReserved = (id) => localStorage.getItem(`rocket-${id}`) === 'reserved';
+  const isReserved = (id) => localStorage.getItem(`dragon-${id}`) === 'reserved';
 
   return (
     <div>
-      {rockets.map((rocket) => (
-        <div key={rocket.id} className="container">
-          {rocket.flickr_images && rocket.flickr_images.length > 0 && (
+      {dragons.map((dragon) => (
+        <div key={dragon.id} className="container">
+          {dragon.flickr_images && dragon.flickr_images.length > 0 && (
             <img
-              src={rocket.flickr_images[0]}
-              alt={rocket.name}
-              className="rocket-img"
+              src={dragon.flickr_images[0]}
+              alt={dragon.name}
+              className="dragon-img"
             />
           )}
           <div className="text-wrapper">
             <div>
-              <h2>{rocket.name}</h2>
+              <h2>{dragon.name}</h2>
               <p>
-                {isReserved(rocket.id) && <span className="badge">Reserved</span>}
+                {isReserved(dragon.id) && <span className="badge">Reserved</span>}
                 {' '}
-                {rocket.description}
+                {dragon.description}
               </p>
             </div>
-            {isReserved(rocket.id) ? (
+            {isReserved(dragon.id) ? (
               <button
                 type="button"
                 className="cancel-btn"
-                onClick={() => handleCancelReservation(rocket.id)}
+                onClick={() => handleCancelReservation(dragon.id)}
               >
                 Cancel reservation
               </button>
@@ -50,7 +50,7 @@ const Rocket = ({ rockets }) => {
               <button
                 type="button"
                 className="reserve-btn"
-                onClick={() => handleReserve(rocket.id)}
+                onClick={() => handleReserve(dragon.id)}
               >
                 Reserve Dragon
               </button>
@@ -62,10 +62,10 @@ const Rocket = ({ rockets }) => {
   );
 };
 
-export default Rocket;
+export default Dragon;
 
-Rocket.propTypes = {
-  rockets: PropTypes.arrayOf(
+Dragon.propTypes = {
+  dragons: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
