@@ -19,8 +19,19 @@ const Mission = () => {
     if (status === 'Not a member') {
       classes = 'member';
     } else classes = 'bg-color';
-
     return classes;
+  };
+
+  const getButtonText = (missionStatus) => {
+    if (missionStatus === 'Active member') return 'Leave mission';
+    if (missionStatus === 'Not a member') return 'Join mission';
+    return 'Join Mission';
+  };
+
+  const getButtonClass = (missionStatus) => {
+    if (missionStatus === 'Active member') return 'button-cancel';
+    if (missionStatus === 'Not a member') return 'button-join';
+    return 'button-join';
   };
 
   useEffect(() => {
@@ -37,9 +48,10 @@ const Mission = () => {
             <th className="mission">Mission</th>
             <th className="col">Description</th>
             <th className="col">Status</th>
+            <th className="col"> </th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="table-body">
           {mission.map((m) => (
             <tr className="table-row" key={m.mission_id}>
               <td>{m.mission_name}</td>
@@ -47,13 +59,13 @@ const Mission = () => {
               <td>
                 <span className={updateColor(m.status)}>{m.status}</span>
               </td>
-              <td>
+              <td className="button-container">
                 <button
                   type="button"
-                  className="button"
+                  className={`button ${getButtonClass(m.status)}`}
                   onClick={() => handleStatusUpdate(m.mission_id)}
                 >
-                  Join Mission
+                  {getButtonText(m.status)}
                 </button>
               </td>
             </tr>
