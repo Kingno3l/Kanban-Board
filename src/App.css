@@ -52,11 +52,6 @@
   padding: 10px;
 }
 
-td,
-th {
-  padding: 10px;
-}
-
 .description {
   width: 60%;
   padding: 20px;
@@ -82,9 +77,23 @@ th {
 }
 
 .button {
-  height: 25px;
+  height: 28px;
   padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 120px;
+}
+
+.button-cancel {
+  border: 1px solid red;
+  color: red;
+  background-color: #fff;
+}
+
+/* Add a border to all cells (th and td) */
+.table tr,
+.table td {
+  border: 1px solid #000; /* Change color and width as needed */
+  padding: 10px;
 }
