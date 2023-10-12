@@ -14,5 +14,5 @@ const MissionProfile = ({ filterMission }) => (
 export default MissionProfile;
 
 MissionProfile.propTypes = {
-  filterMission: PropTypes.array.isRequired,
+  filterMission: PropTypes.arrayOf.isRequired,
 };
