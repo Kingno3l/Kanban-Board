@@ -64,6 +64,7 @@ a {
 .rocket {
   background-color: chocolate;
 }
+
 .rocket-list {
   padding: 5px;
   width: 600px;
@@ -72,5 +73,4 @@ a {
 .rocket-list li {
   border: 1px solid;
   padding: 10px;
-  height: 40px;
 }
