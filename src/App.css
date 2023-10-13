@@ -3,26 +3,33 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
-}
-
-.logo {
-  width: 100px;
+  padding-left: 20px;
 }
 
 .header {
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid red;
 }
 
-.navbar {
+.nav-lists {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 50px 0 0;
   display: flex;
-  margin: 0 50px;
-  gap: 700px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .list-item {
@@ -30,6 +37,26 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.items-list {
+  margin: 0 40px 0 15px;
+  font-size: 1.3em;
+}
+
+.hr {
+  background-color: #000;
+  height: 1px;
+  margin-top: 15px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.space-hub {
+  font-size: 2em;
+  font-weight: bolder;
 }
 
 .mission-section {
@@ -124,4 +151,8 @@
 
 .dragons-profile {
   flex-basis: 33.33%;
+}
+
+a {
+  text-decoration: none;
 }

@@ -4,14 +4,12 @@ import './styles.css';
 import logo from './images/logo.png';
 
 const Navigation = () => (
-  <div>
+  <>
     <header className="header">
-      <h1 className="title">
-        <span className="logo-container">
-          <img src={logo} alt="" className="logo" />
-          <span>Space Travellers Hub</span>
-        </span>
-      </h1>
+      <div className="logo-container">
+        <img src={logo} alt="" className="logo" />
+        <span className="space-hub">Space Travellers Hub</span>
+      </div>
       <nav className="nav-bar">
         <ul className="nav-lists">
           <li className="items-list">
@@ -30,6 +28,7 @@ const Navigation = () => (
       </nav>
     </header>
     <div className="hr" />
-  </div>
+  </>
 );
 export default Navigation;
+

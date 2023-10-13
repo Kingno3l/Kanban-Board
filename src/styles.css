@@ -2,59 +2,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-a {
   text-decoration: none;
 }
 
 .active {
   text-decoration: underline;
-  color: #2f4cf0;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: salmon;
-  height: 65px;
-  width: 100vw;
-}
-
-.nav-lists {
-  list-style-type: none;
-  padding: 0;
-  margin: 0 50px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.items-list {
-  margin: 0 40px 0 15px;
-  font-size: 1.3em;
-}
-
-.hr {
-  background-color: #000;
-  height: 1px;
-  margin-top: 30px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.logo {
-  width: 100px;
-  aspect-ratio: 5/3;
-}
-
-.missions {
-  background-color: #2f4cf0;
 }
 
 .profile {
@@ -138,17 +90,6 @@ a {
   margin: 0;
 }
 
-.ul-list-item {
-  border-bottom: 1px solid rgb(228, 222, 222);
-  width: 100%;
-  padding: 3%;
-  margin: 0;
-}
-
-.ul-list-item:last-child {
-  border-bottom: none;
-}
-
 .rocket-card {
   margin-right: 4%;
 }
@@ -161,4 +102,8 @@ a {
 .rocket-list li {
   border: 1px solid;
   padding: 10px;
+}
+
+a {
+  text-decoration: none;
 }
