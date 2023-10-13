@@ -57,10 +57,10 @@ const Mission = () => {
             <tr className="table-row" key={m.mission_id}>
               <td>{m.mission_name}</td>
               <td className="description">{m.description}</td>
-              <td>
+              <td className="status-container align-middle">
                 <span className={updateColor(m.status)}>{m.status}</span>
               </td>
-              <td className="button-container">
+              <td className="align-middle">
                 <button
                   type="button"
                   className={`button ${getButtonClass(m.status)}`}
