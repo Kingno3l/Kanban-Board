@@ -21,6 +21,9 @@ const Navigation = () => (
             <NavLink to="/missions">Missions</NavLink>
           </li>
           <li className="items-list">
+            <NavLink to="/dragons">Dragons</NavLink>
+          </li>
+          <li className="items-list">
             <NavLink to="/profile">My Profile</NavLink>
           </li>
         </ul>
