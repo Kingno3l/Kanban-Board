@@ -62,4 +62,3 @@ describe('updateColor', () => {
     expect(result).toBe('bg-color');
   });
 });
-
