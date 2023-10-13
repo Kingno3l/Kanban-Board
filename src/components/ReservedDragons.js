@@ -26,4 +26,3 @@ const ReservedDragons = () => {
 };
 
 export default ReservedDragons;
-
