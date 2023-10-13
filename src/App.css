@@ -40,6 +40,10 @@
   margin: 5px;
 }
 
+.mission-profile h1 {
+  width: max-content;
+}
+
 .table {
   width: 100%;
   padding: 10px;
@@ -99,20 +103,25 @@
 
 .profile-section {
   display: flex;
-  gap: 50px;
-  padding: 50px 0 0 50px;
+  justify-content: center;
 }
 
 .mission-container {
-  width: 600px;
-  padding: 5px;
+  width: 33.33%;
 }
 
 .mission-list {
   border: 1px solid;
   padding: 10px;
+  width: 300px;
+  margin: 0;
+  border-radius: 4px;
 }
 
 .button-container {
   align-items: center;
+}
+
+.dragons-profile {
+  flex-basis: 33.33%;
 }
