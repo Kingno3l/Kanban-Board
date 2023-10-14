@@ -1,4 +1,3 @@
-
 import React from 'react';
 import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom';
@@ -20,5 +19,3 @@ describe('all dragons components render', () => {
     expect(userObj).toMatchSnapshot();
   });
 });
-
-
