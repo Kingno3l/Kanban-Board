@@ -7,7 +7,7 @@ const Navigation = () => (
   <>
     <header className="header">
       <div className="logo-container">
-        <img src={logo} alt="" className="logo" />
+        <img src={logo} alt="Space Travellers Hub Logo" className="logo" />
         <span className="space-hub">Space Travellers Hub</span>
       </div>
       <nav className="nav-bar">
