@@ -10,7 +10,6 @@
 }
 
 .profile {
-  padding: 5px;
   flex-basis: 33.33%;
 }
 
@@ -88,10 +87,6 @@
   border-radius: 7px;
   padding: 0;
   margin: 0;
-}
-
-.rocket-card {
-  margin-right: 4%;
 }
 
 .rocket-list {
