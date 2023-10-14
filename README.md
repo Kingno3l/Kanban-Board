@@ -166,7 +166,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 👤 **King Immanuel**
 
-- GitHub: [@kwamay](https://github.com/kingno3l)
+- GitHub: [King Immanuel](https://github.com/kingno3l)
 - LinkedIn: [King Immanuel](https://linkedin.com/in/Kingno3l)
 
 
