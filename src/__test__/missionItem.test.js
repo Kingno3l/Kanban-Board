@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import MissionProfile from '../components/MissionProfile'; // Make sure to import your component correctly
-import { PropTypes } from 'prop-types';
 
 // Create a sample data for testing
 const sampleMissions = [
@@ -25,6 +24,3 @@ test('MissionProfile component renders with mission names', () => {
     expect(missionNameElement).toBeInTheDocument();
   });
 });
-
-PropTypes.func;
-
