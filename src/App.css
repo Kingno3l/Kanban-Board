@@ -130,6 +130,7 @@
 .profile-section {
   display: flex;
   justify-content: center;
+  gap: 20px;
 }
 
 .mission-container {
@@ -137,8 +138,8 @@
 }
 
 .mission-list {
-  border: 1px solid;
-  padding: 10px;
+  border: 0.5px solid grey;
+  padding: 12px;
   width: 300px;
   margin: 0;
   border-radius: 4px;
@@ -154,4 +155,11 @@
 
 a {
   text-decoration: none;
+}
+
+.ul-list-item {
+  border: 0.5px solid grey;
+  padding: 5px;
+  height: 50px;
+  border-radius: 4px;
 }
