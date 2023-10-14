@@ -1,13 +1,13 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
-import RocketsItem from "../Links.js/RocketItem";
+import React from 'react';
+import { render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import configureStore from 'redux-mock-store';
+import RocketsItem from '../Links.js/RocketItem';
 
 const mockStore = configureStore([]);
 
-describe("RocketsItem", () => {
-  it("renders with default props when props are not provided", () => {
+describe('RocketsItem', () => {
+  it('renders with default props when props are not provided', () => {
     const store = mockStore({});
 
     const { getByText, getByAltText } = render(
@@ -19,19 +19,19 @@ describe("RocketsItem", () => {
           image="default-rocket.jpg"
           reserved={false}
         />
-      </Provider>
+      </Provider>,
     );
 
-    const rocketName = getByText("Default Rocket");
-    const rocketDescription = getByText("Default description");
-    const rocketImage = getByAltText("rocket");
+    const rocketName = getByText('Default Rocket');
+    const rocketDescription = getByText('Default description');
+    const rocketImage = getByAltText('rocket');
 
     expect(rocketName).toBeDefined();
     expect(rocketDescription).toBeDefined();
     expect(rocketImage).toBeDefined();
   });
 
-  it("renders with provided props when props are provided", () => {
+  it('renders with provided props when props are provided', () => {
     const store = mockStore({});
 
     const { getByText, getByAltText } = render(
@@ -43,12 +43,12 @@ describe("RocketsItem", () => {
           image="rocket2.jpg"
           reserved
         />
-      </Provider>
+      </Provider>,
     );
 
-    const rocketName = getByText("Rocket 2");
-    const rocketDescription = getByText("Rocket description 2");
-    const rocketImage = getByAltText("rocket");
+    const rocketName = getByText('Rocket 2');
+    const rocketDescription = getByText('Rocket description 2');
+    const rocketImage = getByAltText('rocket');
 
     expect(rocketName).toBeDefined();
     expect(rocketDescription).toBeDefined();
@@ -67,11 +67,11 @@ describe("RocketsItem", () => {
           image="rocket3.jpg"
           reserved
         />
-      </Provider>
+      </Provider>,
     );
 
-    const reservedText = getByText("Reserved");
-    const cancelButton = getByRole("button", { name: "Cancel Reservation" });
+    const reservedText = getByText('Reserved');
+    const cancelButton = getByRole('button', { name: 'Cancel Reservation' });
 
     expect(reservedText).toBeDefined();
     expect(cancelButton).toBeDefined();

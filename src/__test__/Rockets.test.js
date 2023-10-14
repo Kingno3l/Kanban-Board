@@ -1,15 +1,15 @@
-import React from "react";
-import { render } from "@testing-library/react";
-import { useSelector } from "react-redux";
-import Rockets from "../Links.js/Rocket";
+import React from 'react';
+import { render } from '@testing-library/react';
+import { useSelector } from 'react-redux';
+import Rockets from '../Links.js/Rocket';
 
 // Mock the useSelector function from react-redux
-jest.mock("react-redux", () => ({
+jest.mock('react-redux', () => ({
   useSelector: jest.fn(),
 }));
 
-describe("Rockets Component", () => {
-  it("should render loading text when loading is true", () => {
+describe('Rockets Component', () => {
+  it('should render loading text when loading is true', () => {
     useSelector.mockReturnValue({
       loading: true,
       error: false,
@@ -19,10 +19,10 @@ describe("Rockets Component", () => {
     const { getByText } = render(<Rockets />);
 
     // Check if the loading text is present
-    expect(getByText("Loading")).toBeDefined();
+    expect(getByText('Loading')).toBeDefined();
   });
 
-  it("should render error text when error is true", () => {
+  it('should render error text when error is true', () => {
     useSelector.mockReturnValue({
       loading: false,
       error: true,
@@ -32,6 +32,6 @@ describe("Rockets Component", () => {
     const { getByText } = render(<Rockets />);
 
     // Check if the error text is present
-    expect(getByText("Error...")).toBeDefined();
+    expect(getByText('Error...')).toBeDefined();
   });
 });
